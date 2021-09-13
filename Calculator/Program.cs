@@ -60,7 +60,7 @@ namespace Calculator
 
                 #region Display result
                 Console.Clear();
-                Console.WriteLine("The sum of " + op1 + " and " + op2 + " is : " + result);
+                Console.WriteLine("The result of " + op1 + " " + oper +  " " + op2 + " is : " + result);
                 Console.WriteLine("------------------");
 
                 Console.Write("Enter operator : ");
