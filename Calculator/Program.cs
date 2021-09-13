@@ -17,22 +17,13 @@ namespace Calculator
             char oper;
             #endregion Variables declaration
 
-            Console.Write("Enter operator : ");
-            oper = char.Parse(Console.ReadLine());
+            oper = AskUserForCharInput("Enter operator");
 
             while (oper != '#')
             {
                 #region User inputs and variables initialization
-                Console.Write("Enter first operand : ");
-                op1 = int.Parse(Console.ReadLine());
-
-                while (Console.KeyAvailable)
-                {
-                    Console.ReadKey(false); // true = hide input
-                }
-
-                Console.Write("Enter second operand : ");
-                op2 = int.Parse(Console.ReadLine());
+                op1 = AskUserForIntegerInput("Enter first operand");
+                op2 = AskUserForIntegerInput("Enter second operand");
 
                 #endregion User input and variable initialization
 
@@ -40,36 +31,77 @@ namespace Calculator
                 switch (oper)
                 {
                     case ('+'):
-                        result = op1 + op2;
+                        result = Add(op1, op2);
                         break;
                     case ('-'):
-                        result = op1 - op2;
+                        result = Substract(op1, op2);
                         break;
                     case ('*'):
-                        result = op1 * op2;
+                        result = Multiply(op1, op2);
                         break;
                     case ('/'):
-                        result = op1 / op2;
+                        result = Divide(op1, op2);
                         break;
                     default:
-                        Console.Write("Operator not supported");
+                        DisplayMessage("Operator not supported");
                         goto End;
                 }
 
                 #endregion Perform calculations
 
                 #region Display result
-                Console.Clear();
-                Console.WriteLine("The result of " + op1 + " " + oper +  " " + op2 + " is : " + result);
-                Console.WriteLine("------------------");
-
-                Console.Write("Enter operator : ");
-                oper = char.Parse(Console.ReadLine());
-
+                DisplayResult(op1, oper, op2, result);
                 #endregion Display result
+
+                oper = AskUserForCharInput("Enter operator");
             }
             End:
-            Console.WriteLine("You choose to leave...");
+            DisplayMessage("You choose to leave...");
         }
+
+        #region GUI
+        static private char AskUserForCharInput(string question)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private int AskUserForIntegerInput(string question)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private void DisplayResult(int op1, char oper, int op2, int result)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private void DisplayMessage(string message)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion GUI
+
+        #region Perfom calculations
+        static private int Add(int op1, int op2)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private int Substract(int op1, int op2)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private int Multiply(int op1, int op2)
+        {
+            throw new NotImplementedException();
+        }
+
+        static private int Divide(int op1, int op2)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion Perfom calculations
     }
 }
