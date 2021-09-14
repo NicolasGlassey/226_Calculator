@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace MathsLib
 {
-    public class TestMathsBasicsOperation
+    public class TestMathsBasicOperation
     {
         private MathsBasicsOperation _maths = null;
         private int _op1;
