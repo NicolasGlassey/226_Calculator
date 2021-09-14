@@ -15,6 +15,8 @@ namespace Calculator
             int op1;
             int op2;
             char oper;
+            MathsLib.MathsBasicsOperation maths = new MathsLib.MathsBasicsOperation();
+
             #endregion Variables declaration
 
             oper = AskUserForCharInput("Enter operator");
@@ -31,16 +33,16 @@ namespace Calculator
                 switch (oper)
                 {
                     case ('+'):
-                        result = Add(op1, op2);
+                        result = maths.Add(op1, op2);
                         break;
                     case ('-'):
-                        result = Substract(op1, op2);
+                        result = maths.Substract(op1, op2);
                         break;
                     case ('*'):
-                        result = Multiply(op1, op2);
+                        result = maths.Multiply(op1, op2);
                         break;
                     case ('/'):
-                        result = Divide(op1, op2);
+                        result = maths.Divide(op1, op2);
                         break;
                     default:
                         DisplayMessage("Operator not supported");
@@ -80,28 +82,5 @@ namespace Calculator
             throw new NotImplementedException();
         }
         #endregion GUI
-
-        #region Perfom calculations
-        static private int Add(int op1, int op2)
-        {
-            throw new NotImplementedException();
-        }
-
-        static private int Substract(int op1, int op2)
-        {
-            throw new NotImplementedException();
-        }
-
-        static private int Multiply(int op1, int op2)
-        {
-            throw new NotImplementedException();
-        }
-
-        static private int Divide(int op1, int op2)
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion Perfom calculations
     }
 }
