@@ -6,22 +6,22 @@ namespace MathsLib
     {
         public int Add(int op1, int op2)
         {
-            throw new NotImplementedException();
+            return op1 + op2;
         }
 
         public int Substract(int op1, int op2)
         {
-            throw new NotImplementedException();
+            return op1 - op2;
         }
 
         public int Multiply(int op1, int op2)
         {
-            throw new NotImplementedException();
+            return op1 * op2;
         }
 
         public int Divide(int op1, int op2)
         {
-            throw new NotImplementedException();
+            return op1 / op2;
         }
     }
 }
