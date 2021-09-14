@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MathsLib;
+using System;
 
 namespace Calculator
 {
@@ -12,26 +13,24 @@ namespace Calculator
         {
             #region Variables declaration
             int result;
-            int op1;
-            int op2;
-            char oper;
 
             #endregion Variables declaration
 
-            oper = AskUserForCharInput("Enter operator");
+            char oper = AskUserForCharInput("Enter operator");
 
             while (oper != '#')
             {
                 #region User inputs and variables initialization
-                op1 = AskUserForIntegerInput("Enter first operand");
-                op2 = AskUserForIntegerInput("Enter second operand");
+                int op1 = AskUserForIntegerInput("Enter first operand");
+                int op2 = AskUserForIntegerInput("Enter second operand");
 
                 #endregion User input and variable initialization
 
-                result = PerformCalculation(op1, oper, op2);
+                MathsRequest mathsRequest = new MathsRequest(op1, oper, op2);
+                result = PerformCalculation(mathsRequest);
 
                 #region Display result
-                DisplayResult(op1, oper, op2, result);
+                DisplayResult(mathsRequest, result);
                 #endregion Display result
 
                 oper = AskUserForCharInput("Enter operator");
@@ -50,7 +49,7 @@ namespace Calculator
             throw new NotImplementedException();
         }
 
-        static private void DisplayResult(int op1, char oper, int op2, int result)
+        static private void DisplayResult(MathsRequest mathsRequest, int result)
         {
             throw new NotImplementedException();
         }
@@ -61,7 +60,7 @@ namespace Calculator
         }
         #endregion GUI
 
-        static private int PerformCalculation(int op1, char oper, int op2)
+        static private int PerformCalculation(MathsRequest mathsRequest)
         {
             throw new NotImplementedException();
         }
