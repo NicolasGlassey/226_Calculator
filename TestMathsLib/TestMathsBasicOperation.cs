@@ -13,7 +13,6 @@ namespace MathsLib
         public void Setup()
         {
             _maths = new MathsBasicsOperation();
-
         }
 
         [Test]

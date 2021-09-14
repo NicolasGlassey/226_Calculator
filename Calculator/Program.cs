@@ -15,7 +15,6 @@ namespace Calculator
             int op1;
             int op2;
             char oper;
-            MathsLib.MathsBasicsOperation maths = new MathsLib.MathsBasicsOperation();
 
             #endregion Variables declaration
 
@@ -29,27 +28,7 @@ namespace Calculator
 
                 #endregion User input and variable initialization
 
-                #region Perform calculations
-                switch (oper)
-                {
-                    case ('+'):
-                        result = maths.Add(op1, op2);
-                        break;
-                    case ('-'):
-                        result = maths.Substract(op1, op2);
-                        break;
-                    case ('*'):
-                        result = maths.Multiply(op1, op2);
-                        break;
-                    case ('/'):
-                        result = maths.Divide(op1, op2);
-                        break;
-                    default:
-                        DisplayMessage("Operator not supported");
-                        goto End;
-                }
-
-                #endregion Perform calculations
+                result = PerformCalculation(op1, oper, op2);
 
                 #region Display result
                 DisplayResult(op1, oper, op2, result);
@@ -57,7 +36,6 @@ namespace Calculator
 
                 oper = AskUserForCharInput("Enter operator");
             }
-            End:
             DisplayMessage("You choose to leave...");
         }
 
@@ -82,5 +60,10 @@ namespace Calculator
             throw new NotImplementedException();
         }
         #endregion GUI
+
+        static private int PerformCalculation(int op1, char oper, int op2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
