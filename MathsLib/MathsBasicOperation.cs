@@ -2,24 +2,24 @@
 
 namespace MathsLib
 {
-    public class MathsBasicsOperation
+    public static class MathsBasicsOperation
     {
-        public int Add(int op1, int op2)
+        public static int Add(int op1, int op2)
         {
             throw new NotImplementedException();
         }
 
-        public int Substract(int op1, int op2)
+        public static int Substract(int op1, int op2)
         {
             throw new NotImplementedException();
         }
 
-        public int Multiply(int op1, int op2)
+        public static int Multiply(int op1, int op2)
         {
             throw new NotImplementedException();
         }
 
-        public int Divide(int op1, int op2)
+        public static int Divide(int op1, int op2)
         {
             throw new NotImplementedException();
         }

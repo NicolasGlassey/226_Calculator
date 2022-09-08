@@ -13,7 +13,6 @@ namespace Calculator
         {
             #region Variables declaration
             int result;
-
             #endregion Variables declaration
 
             char oper = AskUserForCharInput("Enter operator");
@@ -23,7 +22,6 @@ namespace Calculator
                 #region User inputs and variables initialization
                 int op1 = AskUserForIntegerInput("Enter first operand");
                 int op2 = AskUserForIntegerInput("Enter second operand");
-
                 #endregion User input and variable initialization
 
                 MathsRequest mathsRequest = new MathsRequest(op1, oper, op2);

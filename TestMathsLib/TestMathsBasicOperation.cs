@@ -4,16 +4,9 @@ namespace MathsLib
 {
     public class TestMathsBasicOperation
     {
-        private MathsBasicsOperation _maths = null;
         private int _op1;
         private int _op2;
         private int _res;
-
-        [SetUp]
-        public void Setup()
-        {
-            _maths = new MathsBasicsOperation();
-        }
 
         [Test]
         public void Add_NomincalCase_Success()
@@ -25,7 +18,7 @@ namespace MathsLib
             int actualResult;
 
             //when
-            actualResult = _maths.Add(_op1, _op2);
+            actualResult = MathsBasicsOperation.Add(_op1, _op2);
 
             //then
             Assert.AreEqual(expectedResult, actualResult);
@@ -41,7 +34,7 @@ namespace MathsLib
             int actualResult;
 
             //when
-            actualResult = _maths.Substract(_op1, _op2);
+            actualResult = MathsBasicsOperation.Substract(_op1, _op2);
 
             //then
             Assert.AreEqual(expectedResult, actualResult);
@@ -57,7 +50,7 @@ namespace MathsLib
             int actualResult;
 
             //when
-            actualResult = _maths.Multiply(_op1, _op2);
+            actualResult = MathsBasicsOperation.Multiply(_op1, _op2);
 
             //then
             Assert.AreEqual(expectedResult, actualResult);
@@ -73,7 +66,7 @@ namespace MathsLib
             int actualResult;
 
             //when
-            actualResult = _maths.Divide(_op1, _op2);
+            actualResult = MathsBasicsOperation.Divide(_op1, _op2);
 
             //then
             Assert.AreEqual(expectedResult, actualResult);
