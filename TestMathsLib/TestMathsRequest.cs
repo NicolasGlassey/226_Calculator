@@ -19,7 +19,7 @@ namespace MathsLib
         }
 
         [Test]
-        public void Op1_NomincalCase_Success()
+        public void Op1_GetValue_Success()
         {
             //given
             int expectedResult = _op1;
@@ -33,7 +33,7 @@ namespace MathsLib
         }
 
         [Test]
-        public void Op2_NomincalCase_Success()
+        public void Op2_GetValue_Success()
         {
             //given
             int expectedResult = _op2;

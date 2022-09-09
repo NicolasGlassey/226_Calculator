@@ -15,7 +15,7 @@ namespace MathsLib
         {
             throw new NotImplementedException();
         }
-
+        
         public int Op1
         {
             get
@@ -23,7 +23,7 @@ namespace MathsLib
                 throw new NotImplementedException();
             }
         }
-
+        
         public int Op2
         {
             get
